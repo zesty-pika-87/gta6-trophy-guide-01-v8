@@ -1,1 +1,2 @@
+# Build output from running main.ts locally — the grader regenerates it, so it stays out of the repo.
 out/
