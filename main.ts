@@ -1,18 +1,19 @@
-// A working gta6-trophy-guide-01 entry (Node 22, standard library only): the guide is this directory's app/ folder,
-// plain static files a browser opens at app/index.html (ES modules, CSS, no build step), offline: it loads nothing
-// over the network, and its trophy list and guides are app/data/trophies.json. The program hands it in: it copies app/
-// and screenshots/ from beside this file to /output and writes /output/dossier.json, the summary the judge reads (your
-// screenshots, the first load's files and bytes, and your source), with the vendored make.fun library. Leave
-// vendor/makefun-frontend.ts as it is: the scorer requires dossier.json to be byte for byte what its own copy writes.
+// Leonida Platinum Roadbook v8 — my hand-in program for this entry.
 //
-// Only the plumbing, not a winner: a plain checklist of the 55 trophies with a one-line hint each. Write a real guide
-// for every trophy in your own words, a roadmap to the platinum, filters and a spoiler setting in app/, put 3 or 4 PNG
-// or JPEG screenshots of it in screenshots/ (the first by name is the cover; shots.json says which views this
-// starter's were taken of), and run it.
+// What this build is, in my own words: a fresh, offline GTA VI trophy guide
+// and tracker that I wrote from the kit starter plus my own research notes.
+// It covers all 55 official trophies with a cited guide each, a three-step
+// roadmap to the platinum, a missables view built around the one trophy that
+// can truly be missed, and a checklist that saves in the browser and exports
+// and imports as JSON. The spoiler rule is strict on purpose: with story
+// spoilers hidden, an unearned story trophy shows nothing of itself anywhere.
+// The program below is only plumbing — it copies app/ and screenshots/ into
+// the output folder and writes the dossier with the kit's vendored library,
+// exactly as the starter does, because the scorer rebuilds that dossier and
+// compares the two byte for byte. Leave vendor/makefun-frontend.ts alone.
 //
-// Serve it locally with `node serve.ts`, then open http://localhost:8080.
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+// Run it locally with: mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+// Serve the app locally with: node serve.ts, then open http://localhost:8080.
 
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

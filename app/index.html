@@ -3,23 +3,97 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Platinum Roadbook — GTA VI trophy guide &amp; tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <h1>Leonida Platinum Roadbook</h1>
+      <p class="tagline">An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5 — every guide in its own words, every fact tied to the source that backs it.</p>
+      <p class="counts">55 trophies: 1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; 28 hidden until earned</p>
+    </div>
+    <div class="platinum-box" id="platinumBox" aria-label="Platinum progress">
+      <span class="platinum-label">Road to platinum</span>
+      <span class="platinum-num" id="statPct">0%</span>
+      <span class="platinum-sub" id="statEarned">0 of 55 earned</span>
+    </div>
+  </div>
+  <div class="statsbar" id="statsBar">
+    <span id="statGrades">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</span>
+    <span id="statMiss">Missables left: 1</span>
+    <span id="statNext">Next up: —</span>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+
+<div class="toolbar" role="search">
+  <input id="search" type="search" placeholder="Search trophies by name or guide…" aria-label="Search trophies">
+  <label>Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label>Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="activity">Activities</option>
+      <option value="collectible">Collectibles</option>
+      <option value="stranger">Strangers</option>
+      <option value="money">Money</option>
+      <option value="combat">Combat</option>
+      <option value="exploration">Exploration</option>
+      <option value="robbery">Robbery</option>
+      <option value="completion">Completion</option>
+    </select>
+  </label>
+  <label>Status
+    <select id="statusFilter">
+      <option value="all">All</option>
+      <option value="earned">Earned</option>
+      <option value="unearned">Not earned</option>
+    </select>
+  </label>
+  <label class="check"><input id="missableOnly" type="checkbox"> Missable only</label>
+  <label class="check spoiler-check"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+  <button id="exportBtn" type="button">Export progress</button>
+  <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json"></label>
+  <button id="demoBtn" type="button" class="ghost">Load demo (13 earned)</button>
+  <button id="resetBtn" type="button" class="ghost">Reset</button>
 </div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" data-tab="trophies" class="tab active">Trophies</button>
+  <button type="button" data-tab="roadmap" class="tab">Roadmap</button>
+  <button type="button" data-tab="missables" class="tab">Missables</button>
+  <button type="button" data-tab="nextup" class="tab">Next up</button>
+  <button type="button" data-tab="sources" class="tab">Sources</button>
+</nav>
+
+<main>
+  <section id="view-trophies" class="view active">
+    <div class="split">
+      <div class="list-col">
+        <p class="list-meta" id="listMeta">Showing 55 of 55 trophies</p>
+        <ul id="trophyList" class="trophy-list"></ul>
+      </div>
+      <aside class="detail-col" id="detailPanel" aria-live="polite"></aside>
+    </div>
+  </section>
+  <section id="view-roadmap" class="view"><div id="roadmapView" class="page"></div></section>
+  <section id="view-missables" class="view"><div id="missablesView" class="page"></div></section>
+  <section id="view-nextup" class="view"><div id="nextupView" class="page"></div></section>
+  <section id="view-sources" class="view"><div id="sourcesView" class="page"></div></section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. Trophy names and descriptions are shown as PlayStation publishes them; every guide below them is written for this entry, in its own words, and cites its sources. Works fully offline — your progress never leaves this browser unless you export it.</p>
+</footer>
 <script type="module" src="app.js"></script>
 </body>
 </html>
