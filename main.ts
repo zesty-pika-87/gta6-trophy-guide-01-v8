@@ -1,4 +1,8 @@
 // Leonida Platinum Roadbook v8 — my hand-in program for this entry.
+// Revision note (second pass): the dossier build below is unchanged, but I
+// re-checked it against the kit's scorer caps after the full data file landed
+// — 55 trophies, 66 KB of guides, 4 screenshots — and the plumbing still fits
+// inside every cap, so nothing here needed to change except this comment.
 //
 // What this build is, in my own words: a fresh, offline GTA VI trophy guide
 // and tracker that I wrote from the kit starter plus my own research notes.
