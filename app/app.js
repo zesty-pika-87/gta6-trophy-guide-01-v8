@@ -180,14 +180,6 @@ function renderDetail() {
   }
   detailEl.append(el('h3', '', 'How to get it'));
   detailEl.append(el('p', '', t.guide));
-  if (t.steps && t.steps.length) {
-    const ol = el('ol', 'steps');
-    for (const s of t.steps) ol.append(el('li', '', s));
-    detailEl.append(ol);
-  }
-  detailEl.append(el('h3', '', 'Can it be missed?'));
-  detailEl.append(el('p', '', t.missed || 'Cannot be missed.'));
-  if (t.honesty) detailEl.append(el('p', 'honesty', 'Honesty note: ' + t.honesty));
   if (t.sources && t.sources.length) {
     detailEl.append(el('h3', '', 'Sources — per claim'));
     const ul = el('ul', 'sources');
@@ -200,6 +192,14 @@ function renderDetail() {
     }
     detailEl.append(ul);
   }
+  if (t.steps && t.steps.length) {
+    const ol = el('ol', 'steps');
+    for (const s of t.steps) ol.append(el('li', '', s));
+    detailEl.append(ol);
+  }
+  detailEl.append(el('h3', '', 'Can it be missed?'));
+  detailEl.append(el('p', '', t.missed || 'Cannot be missed.'));
+  if (t.honesty) detailEl.append(el('p', 'honesty', 'Honesty note: ' + t.honesty));
 }
 
 function chapterRow(ch, spoiler) {

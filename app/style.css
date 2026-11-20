@@ -69,15 +69,15 @@ main { max-width: 1240px; margin: 0 auto; padding: 0 22px 20px; }
   background: #10222e; border: 1px solid #f2b134; border-radius: 10px; padding: 16px 18px;
 }
 .detail-col h2 { margin: 0 0 4px; font-size: 22px; color: #ffd97a; }
-.detail-col h3 { margin: 16px 0 6px; font-size: 14px; text-transform: uppercase; letter-spacing: .8px; color: #f2b134; }
-.detail-col p { margin: 6px 0; }
+.detail-col h3 { margin: 10px 0 4px; font-size: 14px; text-transform: uppercase; letter-spacing: .8px; color: #f2b134; }
+.detail-col p { margin: 4px 0; }
 .official { color: #b8d2da; font-style: italic; }
 .counter { display: flex; align-items: center; gap: 10px; margin: 8px 0; font-size: 16px; font-weight: 700; }
 .counter button { width: 34px; height: 34px; font-size: 20px; border-radius: 7px; border: 1px solid #f2b134; background: #f2b134; color: #241a05; cursor: pointer; font-weight: 800; }
 .steps { margin: 6px 0 6px 20px; padding: 0; }
 .steps li { margin-bottom: 6px; }
-.sources { list-style: none; margin: 6px 0; padding: 0; }
-.sources li { margin-bottom: 8px; font-size: 14px; border-left: 3px solid #2b6a7d; padding-left: 10px; }
+.sources { list-style: none; margin: 4px 0; padding: 0; }
+.sources li { margin-bottom: 6px; font-size: 14px; border-left: 3px solid #2b6a7d; padding-left: 10px; }
 .sources .src-name { font-weight: 700; color: #ffd97a; }
 .sources .src-role { color: #9fc3cd; font-size: 12px; display: block; }
 .honesty { background: rgba(242,177,52,.1); border: 1px dashed #f2b134; border-radius: 7px; padding: 8px 10px; font-size: 13px; }

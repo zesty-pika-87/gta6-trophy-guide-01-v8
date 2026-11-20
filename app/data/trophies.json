@@ -590,7 +590,7 @@
    "missableNote": "The first spot only exists in Chapter 1 — do it before the chapter ends.",
    "stage": 1,
    "count": {"target": 18, "unit": "meditations", "source": "PSN trophy target on PSNProfiles"},
-   "guide": "Meditate at 18 spots across 10 locations in Leonida. Each spot can count twice — once per character — and 15 of the 18 are enough for the 100% checklist, but the trophy itself wants them all. The spots are marked with a purple icon on the map; open Map, then Exploration, then Meditate Around Leonida to find the ones left, and check Progress, then Collections, then Exploration, then Meditations to see your count. A meditation is done when the final zen animation plays.",
+   "guide": "Meditate at 18 spots across 10 locations in Leonida. Each spot can count twice — once per character — and 15 of 18 is enough for the 100% checklist, but the trophy wants all 18. Spots show as purple icons on the map (Map, then Exploration, then Meditate Around Leonida); check your count under Progress, then Collections, then Exploration, then Meditations. A meditation is done when the final zen animation plays.",
    "steps": [
     "CHAPTER 1 ONLY: the morning after the first chapter mission, talk to Lucia in the kitchen at Jason's home — she says she is going to meditate. Follow her to the balcony and choose to accept. This adds +1 but is not marked as a Meditation Spot; do it anyway.",
     "Find the 10 spots via Map > Exploration > Meditate Around Leonida (purple icons).",
